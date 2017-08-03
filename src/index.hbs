@@ -6,26 +6,32 @@
 </head>
 <body>
 {{> template/header}}
-<div class="main-page-image">
-    <img src="./img/mainImage1.png">
-</div>
-<div class="main-page-image-selector">
-    <i class="fa fa-circle"></i>
-    <i class="fa fa-circle"></i>
-    <i class="fa fa-circle"></i>
-</div>
-<div class="main-news">
-    <img src="./img/newIcon.png">
-    <div>폴 바셋 스탬프 이벤트 확인 기간 안내
-        <span>2017.07.31</span>
+<section class="main">
+    <div class="main-page-image">
+        <img src="./img/mainImage1.png" class="active">
+        <img src="./img/mainImage2.jpg">
+        <img src="./img/mainImage3.jpg">
     </div>
-</div>
-<div class="main-press">
-    <img src="./img/pressIcon.png">
-    <div>헤럴드경제] "취향저격 성공?실패?...웃고 우는...
-        <span>2017.04.06</span>
+    <div class="main-page-image-selector">
+        <i class="active fa fa-circle"></i>
+        <i class="fa fa-circle"></i>
+        <i class="fa fa-circle"></i>
     </div>
-</div>
+</section>
+<section class="main-sub">
+    <div class="sub-news">
+        <img src="./img/newIcon.png">
+        <div>폴 바셋 스탬프 이벤트 확인 기간 안내
+            <span>2017.07.31</span>
+        </div>
+    </div>
+    <div class="sub-press">
+        <img src="./img/pressIcon.png">
+        <div>헤럴드경제] "취향저격 성공?실패?...웃고 우는...
+            <span>2017.04.06</span>
+        </div>
+    </div>
+</section>
 {{> template/footer}}
 </body>
 </html>

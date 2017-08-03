@@ -3,7 +3,7 @@ const path = require('path');
 const utils = require('./webpack.config.utils');
 
 const port = {
-    web: 89,
+    web: 83,
     was: 8080
 };
 
@@ -13,6 +13,9 @@ const pages = [{
 }, {
     html: 'sub',
     script: 'sub',
+}, {
+    html: 'paulBassett',
+    script: 'paulBassett'
 }];
 
 module.exports = {

@@ -1,11 +1,10 @@
 require('bootstrap');
 require('../less/main.less');
-var hello = require('./sample/hello');
 
-$('.say-hello').on('click', function() {
-    alert(hello.hello($('#txt-hello').val()));
-});
+require('../js/tab');
 
-$('.goto-sub').on('click', function() {
-    location.href = 'sub.html';
+$('.header-bottom > li').on('click', function () {
+    var pageId = $(this).attr('page-id');
+
+    location.href = './paulBassett.html?id=' + pageId;
 });

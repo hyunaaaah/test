@@ -6,7 +6,12 @@
 
 .main-page-image > img {
   width: 900px;
-  height: 700px;
+  height: 600px;
+  display: none;
+}
+
+.main-page-image > img.active {
+  display: inline-block;
 }
 
 .main-page-image-selector {
@@ -20,9 +25,13 @@
   font-size: 10px;
 }
 
-.main-news {
+.fa:active {
+  color: #c4004a;
+}
+
+.sub-news {
   display: inline-block;
-  margin-left: 140px;
+  margin-left: 300px;
   margin-bottom: 30px;
 
   div {
@@ -33,7 +42,7 @@
   }
 }
 
-.main-press {
+.sub-press {
   display: inline-block;
 
   div {
