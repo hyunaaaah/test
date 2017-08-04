@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ABOUT US</title>
+</head>
+<body>
+{{> template/header }}
+<div class="top-image">
+    <img src="./img/menuImage.png" class="menu-image">
+</div>
+<div class="left-menu">
+    <div class="main-menu">MENU</div>
+    <ul class="sub-menu-list">
+        <li class="active coffee">
+            Coffee
+            <ul class="coffee-sub">
+                <li class="active coffee" page-id="Espresso">
+                    About Paul Bassett's Espresso
+                </li>
+                <li class="coffee" page-id="Espresso">
+                    Espresso
+                </li>
+                <li class="coffee" page-id="Lungo">
+                    Lungo
+                </li>
+                <li class="coffee" page-id="Latte">
+                    Latte
+                </li>
+                <li class="coffee" page-id="Frappe">
+                    Frappe
+                </li>
+            </ul>
+        </li>
+        <li class="brand">Brand</li>
+        <li class="barista">Barista</li>
+        <li class="contribution">Social Contribution</li>
+    </ul>
+</div>
+<div class="contents">
+
+    </div>
+</div>
+{{> template/footer }}
+</body>
+</html>

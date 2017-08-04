@@ -3,8 +3,16 @@ require('../less/main.less');
 
 require('../js/tab');
 
-$('.header-bottom > li').on('click', function () {
-    var pageId = $(this).attr('page-id');
+$('.logo').on('click', function () {
+   location.href = './';
+});
 
-    location.href = './paulBassett.html?id=' + pageId;
+var pageId = $('.header-bottom > li').attr('page-id');
+
+$('.aboutUs').on('click', function () {
+   location.href = './paulBassett.html?=' + pageId;
+});
+
+$('.menu').on('click', function () {
+   location.href = './menu.html';
 });
