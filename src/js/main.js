@@ -13,6 +13,4 @@ $('.aboutUs').on('click', function () {
    location.href = './paulBassett.html?=' + pageId;
 });
 
-$('.menu').on('click', function () {
-   location.href = './menu.html';
-});
+

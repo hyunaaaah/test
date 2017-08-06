@@ -4,28 +4,35 @@
   text-align: center;
 }
 
-.menu-image {
+.about-image {
   width: 1000px;
   border-top: solid 10px #c4004a;
 }
 
+.contents {
+  margin: 0px auto;
+  width: 1000px;
+}
+
+// 본문 좌측 메뉴
 .left-menu {
   display: inline-block;
-  margin-top: 20px;
-  margin-left: 300px;
-  width: 200px;
+  height: 600px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .main-menu {
-  padding-bottom: 10px;
-  border-bottom: solid 1px #333;
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px;
+  width: 200px;
   font-size: 20px;
-  letter-spacing: -2px;
+  border-bottom: solid 1px #6b6b6b;
 }
 
 .sub-menu-list > li {
-  margin-top: 10px;
-  cursor: pointer;
+  padding-top: 10px;
 }
 
 .sub-menu-list > li.active {
@@ -36,58 +43,54 @@
   padding-top: 10px;
   padding-left: 10px;
   font-size: 12px;
-  color: #6b6b6b;
 }
 
 .paul-bassett-sub > li.active {
-  color: #c4004a;
+  color: #6b6b6b;
 }
 
-.contents {
+//본문 우측 내용
+.right-contents {
   display: inline-block;
-  vertical-align: top;
   width: 800px;
+  vertical-align: top;
 }
 
 .contents-path {
-  margin-top: 20px;
-  margin-left: 450px;
+  height: 80px;
   font-size: 12px;
   color: #6b6b6b;
+  text-align: right;
+  line-height: 100px;
 }
 
-.main-content {
+.choice-menu {
+  font-weight: bold;
+}
+
+.main-contents {
+  padding-bottom: 70px;
+}
+
+.menu-text-contents {
   font-size: 12px;
-  color: #6b6b6b;
 }
 
-.aboutPaul {
+.about-paul {
   display: inline-block;
-  padding: 20px;
+  margin: 10px 40px 30px 30px;
   vertical-align: top;
 }
 
 .paul-profile {
   display: inline-block;
-  margin-top: 20px;
-  list-style: square;
+  margin: 10px 0px 30px 40px;
 }
 
 .paul-profile > li {
-  margin-left: 50px;
-  padding-bottom: 10px;
+  list-style: square;
 }
 
-.paul-profile > li:last-child {
-  padding-bottom: 20px;
-}
-
-
-.paul-img {
-  margin-left: 20px;
-  margin-bottom: 80px;
-
-  img {
-    width: 100%;
-  }
+.menu-image-contents > img {
+  width: 800px;
 }

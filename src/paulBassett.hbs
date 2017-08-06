@@ -6,63 +6,67 @@
 </head>
 <body>
 {{> template/header }}
-<div class="top-image">
-    <img src="./img/aboutUsImage.png" class="menu-image">
-</div>
-<div class="left-menu">
-    <div class="main-menu">ABOUT US</div>
-    <ul class="sub-menu-list">
-        <li class="active paul-bassett">
-            WBC 챔피언 폴 바셋
-            <ul class="paul-bassett-sub">
-                <li class="active barist-paul" page-id="bristaPaul">
-                    바리스타 폴 바셋
-                </li>
-                <li class="aboutWBC" page-id="WBC">
-                    WBC대회
-                </li>
-            </ul>
-        </li>
-        <li class="brand">Brand</li>
-        <li class="barista">Barista</li>
-        <li class="contribution">Social Contribution</li>
-    </ul>
-</div>
-<div class="contents">
-    <div class="contents-path">
-        HOME > ABOUT US > WBC 챔피언 폴 바셋 > 바리스타 폴바셋
-    </div>
-    <div class="main-content">
-        <div class="aboutPaul">
-            2003년 WBC(세계 바리스타 챔피언십)에서<br>
-            역대 최연소 챔피언을 수상한 호주 출신의 바리스타<br>
-            폴 바셋.<br>
-            그는 원두의 선정부터 로스팅, 추출까지의 모든 과정에<br>
-            심혈을 기울여 최소의 커피를 프로듀스합니다.
-        </div>
-        <ul class="paul-profile">
-            <li>
-                이름: 폴 바셋 (Paul Bassett)
+<section class="top-image">
+    <img src="./img/aboutUsImage.png" class="about-image">
+</section>
+<section class="contents">
+    <nav class="left-menu">
+        <div class="main-menu">ABOUT US</div>
+        <ul class="sub-menu-list">
+            <li class="active paul-bassett">
+                WBC 챔피언 폴 바셋
+                <ul class="paul-bassett-sub">
+                    <li class="barist-paul" page-id="bristaPaul">
+                        바리스타 폴 바셋
+                    </li>
+                    <li class="active aboutWBC" page-id="WBC">
+                        WBC대회
+                    </li>
+                </ul>
             </li>
-            <li>
-                국적: 호주
-            </li>
-            <li>
-                경력: 2003 Australia Barista Championship Winner<br>
-                &emsp;&emsp;&nbsp;&nbsp;2003 World Barista Championship Winner
-            </li>
-            <li>
-                기타: 세계 챔피언.<br>
-                &emsp;&emsp;&nbsp;&nbsp;현재 호주 시드니를 거점으로 아시아, 유럽으로도 활동지역을 넓혀 <br>
-                &emsp;&emsp;&nbsp;&nbsp;다방면에 걸친 커피 비즈니스를 전개<br>
-                &emsp;&emsp;&nbsp;&nbsp;현재 세계가 주목하고 있는 바리스타 중 한명
-            </li>
+            <li class="brand">Brand</li>
+            <li class="barista">Barista</li>
+            <li class="contribution">Social Contribution</li>
         </ul>
-        <div class="paul-img">
-            <img src="./img/paulImage.jpg">
+    </nav>
+    <div class="right-contents">
+        <div class="contents-path">
+            HOME > ABOUT US > WBC 챔피언 폴 바셋 > <span class="choice-menu">바리스타 폴바셋</span>
+        </div>
+        <div class="main-contents">
+            <div class="menu-text-contents">
+                <p class="about-paul">
+                    2003년 WBC(세계 바리스타 챔피언십)에서<br>
+                    역대 최연소 챔피언을 수상한 호주 출신의 <br>
+                    바리스타 폴 바셋. 그는 원두의 선정부터 로스팅, <br>
+                    추출까지의 모든 과정에 심혈을 기울여 <br>
+                    최소의 커피를 프로듀스합니다.
+                </p>
+                <ul class="paul-profile">
+                    <li>
+                        이름: 폴 바셋 (Paul Bassett)
+                    </li>
+                    <li>
+                        국적: 호주
+                    </li>
+                    <li>
+                        경력: 2003 Australia Barista Championship Winner<br>
+                        &emsp;&emsp;&nbsp;&nbsp;2003 World Barista Championship Winner
+                    </li>
+                    <li>
+                        기타: 세계 챔피언.<br>
+                        &emsp;&emsp;&nbsp;&nbsp;현재 호주 시드니를 거점으로 아시아, 유럽으로도 활동지역을 넓혀 다방면에 <br>
+                        &emsp;&emsp;&nbsp;&nbsp;걸친 커피 비즈니스를 전개<br>
+                        &emsp;&emsp;&nbsp;&nbsp;현재 세계가 주목하고 있는 바리스타 중 한명
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-image-contents">
+                <img src="./img/paulImage.jpg">
+            </div>
         </div>
     </div>
-</div>
+</section>
 {{> template/footer }}
 </body>
 </html>
