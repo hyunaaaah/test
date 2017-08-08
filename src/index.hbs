@@ -7,17 +7,24 @@
 <body>
 {{> template/header}}
 <section class="main">
-    <div class="main-page-image">
-        <img src="./img/mainImage1.png" class="active">
-        <img src="./img/mainImage2.jpg">
-        <img src="./img/mainImage3.jpg">
-        <img src="./img/mainImage4.jpg">
-    </div>
-    <div class="main-page-image-selector">
-        <i class="active fa fa-circle"></i>
-        <i class="fa fa-circle"></i>
-        <i class="fa fa-circle"></i>
-        <i class="fa fa-circle"></i>
+    <div class="main-carousel main-images">
+        <ul class="main-carousel-visible">
+            <li style="background-color: #c4004a"></li>
+        </ul>
+        <ul class="main-carousel-indicator">
+            <li class="active num1">
+                <i class="fa fa-circle"></i>
+            </li>
+            <li class="num2">
+                <i class="fa fa-circle"></i>
+            </li>
+            <li class="num3">
+                <i class="fa fa-circle"></i>
+            </li>
+            <li class="num4">
+                <i class="fa fa-circle"></i>
+            </li>
+        </ul>
     </div>
 </section>
 <section class="main-sub">
