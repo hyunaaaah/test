@@ -2,6 +2,7 @@ require('bootstrap');
 require('../less/main.less');
 
 require('../js/tab');
+require('./main-carousel');
 
 $('.logo').on('click', function () {
    location.href = './';
