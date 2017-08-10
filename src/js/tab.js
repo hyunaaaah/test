@@ -1,5 +1,7 @@
 var callback = [];
 
+
+/*  메인페이지 광고 이미지 선택기능 */
 $('.main-page-image-selector > i').on('click', function () {
     if ($(this).hasClass('active')) {
         return;

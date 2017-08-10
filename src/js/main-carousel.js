@@ -1,32 +1,16 @@
-var slides = [];
+var slides = [{
+    img: './img/mainImage1.png',
+}, {
+    img: './img/mainImage2.jpg',
+}, {
+    img: './img/mainImage3.jpg',
+}, {
+    img: './img/mainImage4.jpg'
+}];
 
-var carousel;
+var carousel = $('.main-carousel-visible');
 var currentSlideIndex = 0;
-var timer;
 var animating = false;
-
-var slideDuration = 500;
-var slideInterval = 3000;
-
-var createSlideElement;
-
-function init(carouselElement, _slides, _createSlideElement, options) {
-    carousel = carouselElement.find('.main-carousel-visible');
-    slides = _slides;
-    createSlideElement = _createSlideElement;
-
-    if (options) {
-        slideDuration = options.slideDuration || slideDuration;
-        slideInterval = options.slideInterval || slideInterval;
-    }
-
-    var firstSlideElement = createSlideElement(slides[currentSlideIndex]);
-    carousel.append(firstSlideElement);
-
-    timer = setTimeout(function() {
-        slide('left');
-    }, slideInterval);
-}
 
 function slide(direction) {
     animating = true;
@@ -53,7 +37,8 @@ function slide(direction) {
     }
 
     var currentElement = carousel.find('li');
-    var nextElement = createSlideElement(nextSlide);
+    var nextElement = $('<li></li>');
+    nextElement.css('background-image', nextSlide.img);
     var animationLeft;
 
     if (direction === 'left') {
@@ -70,7 +55,7 @@ function slide(direction) {
     carousel.find('li').animate({
         left: animationLeft
     }, {
-        duration: slideDuration,
+        duration: 400,
         complete: function() {
             currentElement.remove();
             animating = false;
@@ -81,12 +66,12 @@ function slide(direction) {
 
             timer = setTimeout(function() {
                 slide('left');
-            }, slideDuration);
+            }, 2000);
         }
     });
 }
 
-$('.main-carousel-indicator').on('click', function() {
+$('.ht-carousel-arrow').on('click', function() {
     if (animating) {
         return;
     }
@@ -95,10 +80,10 @@ $('.main-carousel-indicator').on('click', function() {
         slide('left');
     }
     else if ($(this).hasClass('right')) {
-        slide('left');
+        slide('right');
     }
 });
 
-module.exports = {
-    init: init
-};
+var timer = setTimeout(function() {
+    slide('left');
+}, 2000);
