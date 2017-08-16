@@ -74,3 +74,22 @@ function slide(direction) {
 var timer = setTimeout(function() {
     slide('left');
 }, 2000);
+
+$('.main-page-image-selector > i').on('click', function () {
+    if (animating) {
+        return;
+    }
+
+    if ($(this).hasClass('first')) {
+        slide('right');
+    }
+    else if ($(this).hasClass('second')) {
+        slide('right');
+    }
+    else if ($(this).hasClass('third')) {
+        slide('right');
+    }
+    else if ($(this).hasClass('fourth')) {
+        slide('left');
+    }
+});
