@@ -10,33 +10,67 @@ var slides = [{
 
 var carousel = $('.main .main-carousel-visible');
 var currentSlideIndex = 0;
+var animating = false;
 
-function slide(index) {
+function slide(direction) {
+    animating = true;
+    clearTimeout(timer);
+
     var currentSlide = slides[currentSlideIndex];
     var nextSlide;
 
+    if (direction === 'left') {
+        nextSlide = slides[++currentSlideIndex];
+
+        if (!nextSlide) {
+            currentSlideIndex = 0;
+            nextSlide = slides[currentSlideIndex];
+        }
+    }
+    else if (direction === 'right') {
+        nextSlide = slides[--currentSlideIndex];
+
+        if (!nextSlide) {
+            currentSlideIndex = slides.length - 1;
+            nextSlide = slides[currentSlideIndex];
+        }
+    }
+
     var currentElement = carousel.find('li');
     var nextElement = $('<li></li>');
+    nextElement.css('background-image', nextSlide.img);
+    var animationLeft;
 
-
-
-    currentElement.css('background-image', currentSlide.img);
-    nextElement.css('background-image', slides[1].img);
-    nextElement.css('left', '1000px');
+    if (direction === 'left') {
+        nextElement.css('left', '100%');
+        animationLeft = '-=100%';
+    }
+    else if (direction === 'right') {
+        nextElement.css('left', '-100%');
+        animationLeft = '+=100%';
+    }
 
     carousel.append(nextElement);
 
-    $('.main-page-image-selector .first').on('click', function () {
-       currentElement.css('left', '0px');
-       nextElement.css('left', '1000px');
+    carousel.find('li').animate({
+        left: animationLeft
+    }, {
+        duration: 500,
+        complete: function() {
+            currentElement.remove();
+            animating = false;
+
+            if (this === currentElement[0]) {
+                return;
+            }
+
+            timer = setTimeout(function() {
+                slide('left');
+            }, 3000);
+        }
     });
-
-
-    $('.main-page-image-selector .second').on('click', function () {
-        currentElement.css('left', '-1000px');
-        nextElement.css('left', '0px');
-    });
-
 }
 
-slide();
+var timer = setTimeout(function() {
+    slide('left');
+}, 2000);
