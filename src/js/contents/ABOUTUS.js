@@ -7,4 +7,7 @@ module.exports = [{
 }, {
     path: 'HOME > ABOUT US > Brand > ',
     choiceMenu: 'Brand Identity'
+}, {
+    path: 'HOME > ABOUT US > Brand > ',
+    choiceMenu: 'Brand Principles'
 }]
