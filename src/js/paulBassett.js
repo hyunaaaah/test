@@ -41,6 +41,18 @@ function initContents() {
             var mainHtml = template2();
 
             $('.main-contents').append(mainHtml);
+            break;
+        case 'aboutUs/identity':
+            var template = require('../template/contents/ABOUTUS.hbs');
+            var template2 = require('../template/contents/brandIdentity.hbs');
+
+            var html = template(about[2]);
+
+            $('.right-contents').append(html);
+
+            var mainHtml = template2();
+            $('.main-contents').append(mainHtml);
+            break;
     }
 }
 
