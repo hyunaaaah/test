@@ -10,6 +10,12 @@ var pageId = params.get('id');
 var about = require('../js/contents/ABOUTUS');
 
 $('.sub-menu-list > li').on('click', function () {
+    var subMenu = $(this).find('.paul-bassett-sub');
+
+    subMenu.slideToggle();
+});
+
+$('.sub-menu-list > li').on('click', function () {
     var mainPageId = $(this).attr('page-id');
 
     if (mainPageId == 'barista' || mainPageId == 'socialContribution') {
