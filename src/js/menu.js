@@ -59,6 +59,18 @@ function initContents() {
 
             $('.main-contents').append(mainHtml);
             break;
+        case 'coffee/latte':
+            var template = require('../template/contents/ABOUTUS.hbs');
+            var template2 = require('../template/contents/latte.hbs');
+
+            var html = template(about[3]);
+
+            $('.right-contents').append(html);
+
+            var mainHtml = template2();
+
+            $('.main-contents').append(mainHtml);
+            break;
     }
 }
 
