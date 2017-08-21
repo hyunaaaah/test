@@ -9,16 +9,28 @@ var pageId = params.get('id');
 
 var about = require('../js/contents/ABOUTUS');
 
+$('.sub-menu-list > li').on('click', function () {
+    var mainPageId = $(this).attr('page-id');
+
+    if (mainPageId == 'barista' || mainPageId == 'socialContribution') {
+        location.href = './paulBassett.html?id=aboutUs/' + mainPageId;
+    }
+    else {
+        return;
+    }
+
+});
+
 $('.paul-bassett-sub > li').on('click', function () {
-    var subPageId = $(this).attr('page-id');
+    var mainPageId = $(this).parents('.sub-menu-list > li').attr('page-id');
+    var subPageId = $(this).attr('subPage-id');
 
-    location.href = './paulBassett.html?id=aboutUs/' + subPageId;
-
+    location.href = './paulBassett.html?id=aboutUs/' + mainPageId + '/' + subPageId;
 });
 
 function initContents() {
     switch (pageId) {
-        case 'aboutUs/baristaPaul':
+        case 'aboutUs/paul/baristaPaul':
             var template = require('../template/contents/ABOUTUS.hbs');
             var template2 = require('../template/contents/baristaPaulBassett.hbs');
 
@@ -30,7 +42,7 @@ function initContents() {
 
             $('.main-contents').append(mainHtml);
             break;
-        case 'aboutUs/WBC':
+        case 'aboutUs/paul/WBC':
             var template = require('../template/contents/ABOUTUS.hbs');
             var template2 = require('../template/contents/WBC.hbs');
 
@@ -42,7 +54,7 @@ function initContents() {
 
             $('.main-contents').append(mainHtml);
             break;
-        case 'aboutUs/identity':
+        case 'aboutUs/brand/identity':
             var template = require('../template/contents/ABOUTUS.hbs');
             var template2 = require('../template/contents/brandIdentity.hbs');
 
@@ -53,11 +65,33 @@ function initContents() {
             var mainHtml = template2();
             $('.main-contents').append(mainHtml);
             break;
-        case 'aboutUs/principles':
+        case 'aboutUs/brand/principles':
             var template  = require('../template/contents/ABOUTUS.hbs');
             var template2 = require('../template/contents/brandPrinciples.hbs');
 
             var html = template(about[3]);
+
+            $('.right-contents').append(html);
+
+            var mainHtml = template2();
+            $('.main-contents').append(mainHtml);
+            break;
+        case 'aboutUs/barista':
+            var template = require('../template/contents/ABOUTUS.hbs');
+            var template2 = require('../template/contents/barista.hbs');
+
+            var html = template(about[4]);
+
+            $('.right-contents').append(html);
+
+            var mainHtml = template2();
+            $('.main-contents').append(mainHtml);
+            break;
+        case 'aboutUs/socialContribution':
+            var template = require('../template/contents/ABOUTUS.hbs');
+            var template2 = require('../template/contents/contribution.hbs');
+
+            var html = template(about[5]);
 
             $('.right-contents').append(html);
 

@@ -10,4 +10,10 @@ module.exports = [{
 }, {
     path: 'HOME > ABOUT US > Brand > ',
     choiceMenu: 'Brand Principles'
+}, {
+    path: 'HOME > ABOUT US > ',
+    choiceMenu: 'Barista'
+}, {
+    path: 'HOME > ABOUT US > ',
+    choiceMenu: 'Social Contribution'
 }]
