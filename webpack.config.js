@@ -16,6 +16,9 @@ const pages = [{
 }, {
     html: 'paulBassett',
     script: 'paulBassett'
+}, {
+    html: 'menu',
+    script: 'menu'
 }];
 
 module.exports = {

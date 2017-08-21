@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ABOUT US</title>
+</head>
+<body>
+{{> template/header }}
+<section class="top-image">
+    <img src="./img/menuImage.png" class="about-image">
+</section>
+<section class="contents">
+    <div class="left-menu">
+        <div class="main-menu">MENU</div>
+        <ul class="sub-menu-list">
+            <li class="coffeeMenu" page-id="coffee">
+                Coffee
+                <ul class="paul-bassett-sub">
+                    <li class="aboutEspresso" subPage-id="aboutEspresso">
+                        About Paul Bassett's Espresso
+                    </li>
+                    <li subPage-id="espresso">
+                        Espresso
+                    </li>
+                    <li subPage-id="lungo">
+                        Lungo
+                    </li>
+                    <li subPage-id="latte">
+                        Latte
+                    </li>
+                    <li subPage-id="frappe">
+                        Frappe
+                    </li>
+                </ul>
+            </li>
+            <li class="nonCoffeeMenu" page-id="nonCoffee">
+                Non-coffee
+                <ul class="paul-bassett-sub">
+                    <li subPage-id="frappe">
+                        Frappe
+                    </li>
+                    <li subPage-id="yogurt">
+                        Yogurt
+                    </li>
+                    <li subPage-id="tea">
+                        Tea
+                    </li>
+                    <li subPage-id="ade">
+                        Sparkling Ade
+                    </li>
+                    <li subPage-id="iceCream">
+                        Milk Ice-Cream
+                    </li>
+                    <li subPage-id="beer">
+                        Draught Beer
+                    </li>
+                    <li subPage-id="chocolate">
+                        Chocolate
+                    </li>
+                </ul>
+            </li>
+            <li class="foodMenu" page-id="food">
+                Food
+                <ul class="paul-bassett-sub">
+                    <li subPage-id="tart">
+                        Protuguese Tart
+                    </li>
+                    <li subPage-id="cake">
+                        Premium Dessert Cake
+                    </li>
+                    <li subPage-id="morningFood">
+                        Morning Foods
+                    </li>
+                </ul>
+            </li>
+            <li class="homeCafe" page-id="homeCafe">
+                Home Cafe
+                <ul class="paul-bassett-sub">
+                    <li subPage-id="coffeeBeans">
+                        Specialty Coffee Beans
+                    </li>
+                    <li subPage-id="capsule">
+                        Barista Capsule
+                    </li>
+                    <li subPage-id="pouch">
+                        Barista Pouch
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="right-contents">
+
+    </div>
+</section>
+{{> template/footer }}
+</body>
+</html>
