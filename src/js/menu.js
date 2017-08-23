@@ -71,6 +71,54 @@ function initContents() {
 
             $('.main-contents').append(mainHtml);
             break;
+        case 'coffee/frappe':
+            var template = require('../template/contents/ABOUTUS.hbs');
+            var template2 = require('../template/contents/frappe.hbs');
+
+            var html = template(about[3]);
+
+            $('.right-contents').append(html);
+
+            var mainHtml = template2();
+
+            $('.main-contents').append(mainHtml);
+            break;
+        case 'nonCoffee/frappe':
+            var template = require('../template/contents/ABOUTUS.hbs');
+            var template2 = require('../template/contents/nonFrappe.hbs');
+
+            var html = template(about[3]);
+
+            $('.right-contents').append(html);
+
+            var mainHtml = template2();
+
+            $('.main-contents').append(mainHtml);
+            break;
+        case 'nonCoffee/yogurt':
+            var template = require('../template/contents/ABOUTUS.hbs');
+            var template2 = require('../template/contents/yogurt.hbs');
+
+            var html = template(about[3]);
+
+            $('.right-contents').append(html);
+
+            var mainHtml = template2();
+
+            $('.main-contents').append(mainHtml);
+            break;
+        case 'nonCoffee/tea':
+            var template = require('../template/contents/ABOUTUS.hbs');
+            var template2 = require('../template/contents/tea.hbs');
+
+            var html = template(about[3]);
+
+            $('.right-contents').append(html);
+
+            var mainHtml = template2();
+
+            $('.main-contents').append(mainHtml);
+            break;
     }
 }
 

@@ -10,4 +10,10 @@ module.exports = [{
 }, {
     path: 'HOME > MENU > Coffee > ',
     choiceMenu: 'Latte'
+}, {
+    path: 'HOME > MENU > Coffee > ',
+    choiceMenu: 'Frappe'
+}, {
+    path: 'HOME > MENU > Non-coffee > ',
+    chocieMenu: 'Frappe'
 }]
