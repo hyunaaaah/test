@@ -8,10 +8,8 @@ $('.logo').on('click', function () {
    location.href = './';
 });
 
-var pageId = $('.header-bottom > li').attr('page-id');
-
 $('.aboutUs').on('click', function () {
-   location.href = './paulBassett.html?=' + pageId;
+   location.href = './paulBassett.html?=aboutUs/baristaPaul';
 });
 
 $('.menu').on('click', function () {

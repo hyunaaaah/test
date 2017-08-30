@@ -14,43 +14,39 @@
   width: 1000px;
 }
 
-// 본문 좌측 메뉴
-.left-menu {
+//좌측 서브메뉴
+.left-menus {
   display: inline-block;
-  height: 600px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.main-menu {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 10px;
+  padding: 20px;
   width: 200px;
-  font-size: 20px;
-  border-bottom: solid 1px #6b6b6b;
-}
-
-.sub-menu-list > li {
-  padding-top: 10px;
-}
-
-.sub-menu-list > li.active {
-  color: #c4004a;
-}
-
-.paul-bassett-sub {
-  display: none;
-}
-
-.paul-bassett-sub > li {
-  padding-top: 10px;
-  padding-left: 10px;
-  font-size: 12px;
-}
-
-.paul-bassett-sub > li.active {
+  height: 600px;
   color: #6b6b6b;
+  font-size: 12px;
+  cursor: pointer;
+
+  div {
+    padding-bottom: 10px;
+    font-size: 15px;
+    letter-spacing: -2px;
+    border-bottom: solid 1px #6b6b6b;
+  }
+
+  li {
+    margin: 10px 0px;
+  }
+}
+
+.left-sub-menu {
+  margin-left: 10px;
+  display: none;
+
+  li:hover {
+    color: #c4004a;
+  }
+}
+
+.left-menus li.active .left-sub-menu {
+  display: block;
 }
 
 //About Us 본문 우측 내용
@@ -245,4 +241,67 @@
 .socialImage img {
   margin: 30px;
   width: 740px;
+}
+
+//menu
+.tea-explain1 {
+  position: relative;
+
+  p {
+    width: 580px;
+    height: 250px;
+  }
+}
+
+.tea-explain2 {
+  position: relative;
+  margin-bottom: 50px;
+
+  span {
+    position: absolute;
+    left: 150px;
+  }
+
+  p {
+    position: absolute;
+    left: 150px;
+    top: 20px;
+    width: 580px;
+    height: 250px;
+  }
+}
+
+#tea-image1 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 200px;
+  height: 250px;
+}
+
+#tea-image2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 150px;
+  height: 60px;
+}
+
+
+#iceCream {
+  position: relative;
+  margin-bottom: 100px;
+
+  img {
+    width: 150px;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+  }
+
+  p {
+    margin: 30px;
+    width: 550px;
+    font-size: 12px;
+  }
 }

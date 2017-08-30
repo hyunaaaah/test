@@ -9,34 +9,30 @@ var pageId = params.get('id');
 
 var about = require('../js/contents/ABOUTUS');
 
-$('.sub-menu-list > li').on('click', function () {
-    var subMenu = $(this).find('.paul-bassett-sub');
-
-    subMenu.slideToggle();
+//메인화면 좌측 메뉴
+$('.left-menus > li').on('click', function () {
+    var subMenus = $(this).find('.left-sub-menu');
+    subMenus.slideToggle();
 });
 
-$('.sub-menu-list > li').on('click', function () {
-    var mainPageId = $(this).attr('page-id');
+$('.left-sub-menu > li').on('click', function () {
+    var pageId = $(this).attr('page-id');
 
-    if (mainPageId == 'barista' || mainPageId == 'socialContribution') {
-        location.href = './paulBassett.html?id=aboutUs/' + mainPageId;
-    }
-    else {
+    location.href = 'paulBassett.html?id=aboutUs/' + pageId;
+});
+
+$('.left-menus > li').on('click', function () {
+    var pageId = $(this).attr('page-id');
+
+    if (pageId === undefined) {
         return;
     }
-
-});
-
-$('.paul-bassett-sub > li').on('click', function () {
-    var mainPageId = $(this).parents('.sub-menu-list > li').attr('page-id');
-    var subPageId = $(this).attr('subPage-id');
-
-    location.href = './paulBassett.html?id=aboutUs/' + mainPageId + '/' + subPageId;
+    location.href = 'paulBassett.html?id=aboutUs/' + pageId;
 });
 
 function initContents() {
     switch (pageId) {
-        case 'aboutUs/paul/baristaPaul':
+        case 'aboutUs/baristaPaul':
             var template = require('../template/contents/ABOUTUS.hbs');
             var template2 = require('../template/contents/baristaPaulBassett.hbs');
 
@@ -48,7 +44,7 @@ function initContents() {
 
             $('.main-contents').append(mainHtml);
             break;
-        case 'aboutUs/paul/WBC':
+        case 'aboutUs/wbc':
             var template = require('../template/contents/ABOUTUS.hbs');
             var template2 = require('../template/contents/WBC.hbs');
 
@@ -60,7 +56,7 @@ function initContents() {
 
             $('.main-contents').append(mainHtml);
             break;
-        case 'aboutUs/brand/identity':
+        case 'aboutUs/identity':
             var template = require('../template/contents/ABOUTUS.hbs');
             var template2 = require('../template/contents/brandIdentity.hbs');
 
@@ -71,7 +67,7 @@ function initContents() {
             var mainHtml = template2();
             $('.main-contents').append(mainHtml);
             break;
-        case 'aboutUs/brand/principles':
+        case 'aboutUs/principles':
             var template  = require('../template/contents/ABOUTUS.hbs');
             var template2 = require('../template/contents/brandPrinciples.hbs');
 
@@ -108,5 +104,4 @@ function initContents() {
 }
 
 initContents();
-
 
