@@ -16,3 +16,6 @@ $('.menu').on('click', function () {
     location.href = './menu.html';
 });
 
+$('.shop').on('click', function () {
+   location.href = './shop.html';
+});
